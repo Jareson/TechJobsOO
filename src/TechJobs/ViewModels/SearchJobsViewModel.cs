@@ -5,10 +5,8 @@ using TechJobs.Models;
 
 namespace TechJobs.ViewModels
 {
-    public class SearchJobsViewModel 
+    public class SearchJobsViewModel:BaseViewModel
     {
-        // TODO #7.1 - Extract members common to JobFieldsViewModel
-        // to BaseViewModel
 
         // The search results
         public List<Job> Jobs { get; set; }
@@ -20,11 +18,6 @@ namespace TechJobs.ViewModels
         [Display(Name = "Keyword:")]
         public string Value { get; set; } = "";
 
-        // All columns, for display
-        public List<JobFieldType> Columns { get; set; }
-
-        // View title
-        public string Title { get; set; } = "";
 
         public SearchJobsViewModel()
         {
